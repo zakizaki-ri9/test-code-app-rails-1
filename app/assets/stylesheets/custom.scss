@@ -1,6 +1,5 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-
 /* 全体 */
 
 body {
@@ -53,4 +52,37 @@ h2 {
 p {
     font-size: 1.1em;
     line-height: 1.7em;
+}
+
+/* footer */
+
+footer {
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #777;
+}
+
+footer a {
+    color: #555;
+}
+
+footer a:hover {
+    color: #222;
+}
+
+footer small {
+    float: left;
+}
+
+footer ul {
+    float: right;
+    list-style: none;
+}
+
+footer ul li {
+    float: left;
+    margin-left: 15px;
 }
