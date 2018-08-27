@@ -1,7 +1,14 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-/* 全体 */
 
+/* mixin */
+@mixin box_sizing {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* 全体 */
 body {
     padding-top: 60px;
 }
@@ -103,4 +110,13 @@ footer ul {
 footer ul li {
     float: left;
     margin-left: 15px;
+}
+
+/* debug表示の整形 */
+.debug_dump {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+    @include box_sizing;
 }
