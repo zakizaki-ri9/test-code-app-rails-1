@@ -23,6 +23,9 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     # 再び登録ページが表示されているかの確認
     assert_template 'users/new'
 
+    # エラーメッセージ用のdivが表示されているかの確認
+    assert_select 'div#error_explanation'
+
   end
   
 end
