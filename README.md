@@ -1,4 +1,9 @@
+
 # Railsチュートリアル3章以降のアプリケーション
+
+## URL(heroku)
+
+https://ror-ttl-sample-zackey-app-1.herokuapp.com/
 
 ## 主に学べること
 
