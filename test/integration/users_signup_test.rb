@@ -55,6 +55,9 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     # flashが設定されていることを確認
     assert_not flash[:success].nil?
 
+    # ログインチェック
+    assert is_logged_in?
+
   end
   
 end
