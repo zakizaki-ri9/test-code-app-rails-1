@@ -56,4 +56,18 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     
   end
 
+  # rememberme on状態でのログインテスト
+  test "login with remembering" do
+    log_in_as(@user, remember_me: '1')
+    assert_not_empty cookies['remember_token']
+  end
+
+  # rememberme off状態でのログアウト
+  test "login without remembering" do
+    log_in_as(@user, remember_me: '1')
+    delete logout_path
+    log_in_as(@user, remember_me: '0')
+    assert_empty cookies['remember_token']
+  end
+
 end
