@@ -30,6 +30,15 @@ class User < ApplicationRecord
         update_attribute(:remember_digest, User.digest(remember_token))
     end
 
+    def autenticated?(remember_token)
+        BCrypt::Password.new(remember_digest).is_password?(remember_token)
+    end
+
+    # 記憶ダイジェストの初期化
+    def forget
+        update_attribute(:remember_digest, nil)
+    end
+
     class << self
         # 少ないコストの文字列のハッシュ値を返す
         def digest(string)
@@ -43,5 +52,4 @@ class User < ApplicationRecord
             SecureRandom.urlsafe_base64
         end
     end
-
 end
