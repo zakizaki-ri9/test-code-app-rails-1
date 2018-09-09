@@ -19,3 +19,15 @@ https://ror-ttl-sample-zackey-app-1.herokuapp.com/
     - `get '/free_name' to: 'controller_name/method_name', as: 'free'`
         - `as`有りなら`free_url,free_path`
         - `as`無しなら`free_name_url,free_name_path`
+
+# RSpecを理解するために参考にした記事
+
+- 事始め
+    - 主に導入〜modelに対してのテスト記述- 
+    - https://www.sejuku.net/blog/47847
+- it(integration_test＝コントローラー)の書き方
+    - https://blog.naichilab.com/entry/2016/01/19/011514
+- できれば以下を購入したいところ
+    - https://leanpub.com/everydayrailsrspec-jp
+
+
