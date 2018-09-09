@@ -21,6 +21,9 @@ gem 'webpacker'
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -31,7 +34,6 @@ group :development do
 end
 
 group :test do
-  gem 'rails-controller-testing'
   gem 'minitest-reporters'
   gem 'guard'
   gem 'guard-minitest'
