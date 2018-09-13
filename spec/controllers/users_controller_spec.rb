@@ -27,6 +27,9 @@ RSpec.describe UsersController, type: :controller do
     it "リクエスト200OKであること" do
       expect(response.status).to eq 200
     end
+    it "editテンプレートが選択されていること" do
+      expect(response).to render_template :edit
+    end
   end
 
 end

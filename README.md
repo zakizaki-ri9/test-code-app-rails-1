@@ -22,6 +22,8 @@ https://ror-ttl-sample-zackey-app-1.herokuapp.com/
 
 # RSpecを理解するために参考にした記事
 
+## 参考
+
 - 事始め
     - 主に導入〜modelに対してのテスト記述- 
     - https://www.sejuku.net/blog/47847
@@ -30,4 +32,6 @@ https://ror-ttl-sample-zackey-app-1.herokuapp.com/
 - できれば以下を購入したいところ
     - https://leanpub.com/everydayrailsrspec-jp
 
+## 記法
 
+- expect
