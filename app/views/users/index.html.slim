@@ -4,7 +4,5 @@ h1
 = pagy_nav_bootstrap(@pagy).html_safe if 1 < @pagy.pages
 ul.users
   - @users.each do |user|
-    li
-      = gravatar_for user, size: 50
-      = link_to user.name, user
+    = render user
 = pagy_nav_bootstrap(@pagy).html_safe if 1 < @pagy.pages
