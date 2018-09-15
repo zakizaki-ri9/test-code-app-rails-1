@@ -17,10 +17,15 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'webpacker'
+gem 'pagy'
 
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'spring-commands-rspec'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -31,7 +36,6 @@ group :development do
 end
 
 group :test do
-  gem 'rails-controller-testing'
   gem 'minitest-reporters'
   gem 'guard'
   gem 'guard-minitest'

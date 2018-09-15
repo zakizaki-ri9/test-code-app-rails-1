@@ -1,0 +1,8 @@
+- provide(:title, "All users")
+h1
+  | All users
+= pagy_nav_bootstrap(@pagy).html_safe if 1 < @pagy.pages
+ul.users
+  - @users.each do |user|
+    = render user
+= pagy_nav_bootstrap(@pagy).html_safe if 1 < @pagy.pages

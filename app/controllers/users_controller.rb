@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
+
+  include Pagy::Backend
+
   def new
     @user = User.new
   end
@@ -18,6 +21,24 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = "Update success!!"
+      redirect_to @user
+    else
+      render 'edit'
+    end
+  end
+
+  def index
+    @pagy, @users = pagy(User.all)
   end
 
   private
