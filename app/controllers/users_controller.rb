@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
+
+  include Pagy::Backend
+
   def new
     @user = User.new
   end
@@ -32,6 +35,10 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def index
+    @pagy, @users = pagy(User.all)
   end
 
   private

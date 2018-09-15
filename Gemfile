@@ -17,6 +17,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'webpacker'
+gem 'pagy'
 
 group :development, :test do
   gem 'sqlite3'
