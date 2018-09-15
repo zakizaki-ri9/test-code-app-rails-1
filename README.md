@@ -31,7 +31,56 @@ https://ror-ttl-sample-zackey-app-1.herokuapp.com/
     - https://blog.naichilab.com/entry/2016/01/19/011514
 - できれば以下を購入したいところ
     - https://leanpub.com/everydayrailsrspec-jp
+        - 買った
 
-## 記法
+## 勉強メモ
 
-- expect
+### 用語
+
+- テストスイート
+    - 多数のテストケースを束ねたもののこと　
+    - 一応参考記事↓
+    - http://www.itmedia.co.jp/im/articles/1111/07/news187.html
+
+### 環境準備
+
+- Gemfileへ`rspec-rails`を追記
+- `bundle install --without production`実行
+- `rails g rspec:install`実行
+
+上記の情報は以下Rubyistのページにも記載されている。
+https://magazine.rubyist.net/articles/0021/0021-Rspec.html#rspec-%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B
+
+### メモ
+
+- `.rspec`
+    - 設定ファイル
+    - `--format documentation`を追記することでRSpecの結果が見やすくなる
+    - こんなに違う（以下コード参照）
+
+```
+## ---追記前---
+$ bin/rspec
+Running via Spring preloader in process 8975
+..
+
+Finished in 0.11803 seconds (files took 0.30191 seconds to load)
+2 examples, 0 failures
+
+## ---追記後---
+$ bin/rspec
+Running via Spring preloader in process 9003
+
+UsersController
+  GET #edit
+    リクエスト200OKであること
+    editテンプレートが選択されていること
+
+Finished in 0.09904 seconds (files took 0.27824 seconds to load)
+2 examples, 0 failures
+```
+
+- `binstub`
+    - テストスイートの起動時間を早くする
+        - Gemfileへ`spring-commands-rspec`を追記
+
