@@ -18,6 +18,7 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'webpacker'
 gem 'pagy'
+gem 'faker'
 
 group :development, :test do
   gem 'sqlite3'
