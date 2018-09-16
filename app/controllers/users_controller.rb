@@ -4,6 +4,9 @@ class UsersController < ApplicationController
 
   include Pagy::Backend
 
+  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :admin_user, only: :destroy
+
   def new
     @user = User.new
   end
@@ -41,9 +44,26 @@ class UsersController < ApplicationController
     @pagy, @users = pagy(User.all)
   end
 
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = 'User deleted!!'
+    redirect_to users_url
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
+
+  def logged_in_user
+    flash[:danger] = 'Please login or sign up!!'
+    redirect_to(login_url) unless logged_in?
+  end
+
+  def admin_user
+    flash[:danger] = 'You do not have permission to delete'
+    redirect_to(root_url) unless current_user.admin?
+  end
+
 end
