@@ -84,3 +84,6 @@ Finished in 0.09904 seconds (files took 0.27824 seconds to load)
     - テストスイートの起動時間を早くする
         - Gemfileへ`spring-commands-rspec`を追記
 
+- UIのテスト
+    - フューチャースペックというものを使用する
+        - Gemfileへ`capybara`を追記
