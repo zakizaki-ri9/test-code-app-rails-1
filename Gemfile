@@ -18,6 +18,7 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'webpacker'
 gem 'pagy'
+gem 'faker'
 
 group :development, :test do
   gem 'sqlite3'
@@ -26,6 +27,7 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
+  gem 'capybara'
 end
 
 group :development do
