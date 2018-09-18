@@ -57,8 +57,10 @@ class UsersController < ApplicationController
   end
 
   def logged_in_user
-    flash[:danger] = 'Please login or sign up!!'
-    redirect_to(login_url) unless logged_in?
+    unless logged_in?
+      flash[:danger] = 'Please login or sign up!!'
+      redirect_to(login_url)
+    end
   end
 
   def admin_user
