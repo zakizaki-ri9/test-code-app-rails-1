@@ -38,6 +38,7 @@ group :development do
 end
 
 group :test do
+  gem 'rspec_junit_formatter'
   gem 'minitest-reporters'
   gem 'guard'
   gem 'guard-minitest'
