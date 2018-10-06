@@ -35,7 +35,10 @@ jobs:
           paths:
             - ./vendor/bundle
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-        
+      
+      # For webpacker
+      - run: yarn install
+
       # Database setup
       - run: bundle exec rake db:create
       - run: bundle exec rake db:schema:load
